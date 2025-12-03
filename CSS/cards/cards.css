@@ -1,0 +1,107 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin:0;
+    box-sizing: border-box;
+    
+}
+body
+{
+    background-color: #eeedf0;
+    padding-bottom: 100px;
+}
+
+.nav{
+    text-align: center;
+}
+.nav a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+/* card one */
+.card-one,.card-two,.card-three{
+    width: 260px;
+    margin: 100px auto 60px auto;
+    background-color: white;
+    //border: 1px solid rgb(213, 212, 212);   
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px lightgray;
+}
+
+.card-img{
+    width: 80%;
+    margin: 0px;
+}
+.card-head{
+    font-size: 20px;
+    margin: 0px;
+}
+.card-description{
+    font-size: 10px;
+    margin: 2px;
+    margin-bottom: 30px;
+}
+.card-description span{
+    font-weight: 600;
+}
+.input{
+    width: 100%;
+    border: 2px solid #3bb489;
+    padding: 7px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 3px #3bb489;
+}
+button{
+    width: 100%;
+    background-color: #3bb489;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Card Two */
+.card-two .card-head{
+    margin-top: 10px;
+}
+.card-classificarion{
+    text-align: left;
+    word-spacing: 0.3rem;
+    font-size: 0.8rem;
+    padding: 8px 10px;
+    border-radius: 4px;
+   
+}
+
+#work {
+    background-color: #f3f3f5;
+}
+
+/* Card Three */
+.card-three{
+    margin: 80px auto 70px auto;
+}
+.card-three .card-description
+{
+    margin-bottom: 1.3rem;
+}
+.card-three div
+{   margin: 0px;
+    text-align: left;
+}
+.card-three .input{
+    margin-bottom: 0.2rem;
+    margin-top: 0.15rem;
+    box-shadow: none;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+.card-three button{
+    margin-top: 0.6rem;
+}
+.label{
+    font-size: 0.6rem;
+}
