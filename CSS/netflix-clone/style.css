@@ -165,9 +165,10 @@ section{
 }
 video{
     position:absolute;
-    width: 80%;
+    top: 8px;
+    width: 73%;
     height: 90%;
-    margin-left: 62px;
+    margin-left: 60px;
 
 }
 .left .title{
