@@ -124,8 +124,10 @@ body{
     cursor: pointer;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     width:190px;
+    font-weight: bold;
 
 }       
 
