@@ -194,7 +194,7 @@ section{
 /* FAQ Section */
 .faq-section{
     width: 990px;
-    margin: 0 auto;
+    margin: 100px auto;
     color: white;
     text-align: center;
     padding-bottom: 50px;
@@ -203,7 +203,7 @@ section{
     font-size: 36px;
     margin-bottom: 30px;
 }
-.faq-list{
+.faq{
     margin-top: 20px;
     text-align: left;
 }
@@ -218,22 +218,20 @@ section{
     justify-content: space-between;
     align-items: center;
 }
-.faq-item h2{
+.faq-item h3{
     font-size: 24px;
     margin: 0;
 }   
-.faq-item .icon{
+.faq-item .faq-icon{
     font-size: 30px;
     font-weight: bold;
 }
-.faq-item .answer{
-    margin-top: 10px;
-    font-size: 18px;
-    display: none;
+
+.faq-item:hover{
+    background-color: rgb(80, 80, 80);
+    transition: 0.3s;
 }
-.faq-item.active .answer{
-    display: block;
-}
-.faq-item.active .icon{
-    transform: rotate(45deg);
-}
+.faq-item:hover .faq-icon{
+    transform: scale(1.5);
+   
+}   
