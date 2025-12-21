@@ -81,7 +81,7 @@ body{
     cursor: pointer;
 }
 
-.title{
+.hero-title{
     font-size: 46px;
     
     text-align: center;
@@ -92,7 +92,7 @@ body{
     margin-top: 20px;
 }
 
-.content .description{
+.content .herodescription{
     font-size: 18px;
     margin-top: 20px;
 }
@@ -163,20 +163,77 @@ section{
     position:relative;
     
 }
-video{
+.video{
     position:absolute;
-    top: 8 px;
+    top: 9px;
     width: 73%;
     height: 90%;
     margin-left: 60px;
 
 }
-.left .title{
+.title{
     font-size: 36px;
     text-align: left;
 }
-.left .description{
+.description{
     font-size: 20px;
     text-align: left;
     margin-top: 20px;
+}
+
+.video1{
+    
+    position:absolute;
+    top: 36px;
+    width: 62%;
+    
+    margin-left: 85px;
+
+}
+
+/* FAQ Section */
+.faq-section{
+    width: 990px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.faq-section h1{
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+.faq-list{
+    margin-top: 20px;
+    text-align: left;
+}
+
+.faq-item{
+    background-color: rgb(51, 51, 51);
+    margin-bottom: 10px;
+    border-radius: 6px;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faq-item h2{
+    font-size: 24px;
+    margin: 0;
+}   
+.faq-item .icon{
+    font-size: 30px;
+    font-weight: bold;
+}
+.faq-item .answer{
+    margin-top: 10px;
+    font-size: 18px;
+    display: none;
+}
+.faq-item.active .answer{
+    display: block;
+}
+.faq-item.active .icon{
+    transform: rotate(45deg);
 }
