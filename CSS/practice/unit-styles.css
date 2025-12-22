@@ -1,0 +1,46 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.box{
+    font-size: 16px;
+    width: 50%;
+    border: 2px solid black;
+    padding: 5rem;
+    background-color: black;
+    color: white;
+   
+    box-sizing: border-box;
+}
+
+.title{
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+.description{
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.parent{
+    font-size: 16px;    
+}
+
+.demo{
+    width: 80vw;
+    height: 10vh;
+    background-color: coral;
+}
+.demo h2{
+    font-size: 5vmax;
+    color: white;
+    text-align: center;
+    margin: 0;
+    line-height: 10vh;
+}
