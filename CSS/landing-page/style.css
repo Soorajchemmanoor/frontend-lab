@@ -156,3 +156,42 @@ nav a{
     margin: 0;
     font-size: 1.1em;
 }
+
+.testimonials-section{
+    margin: 3em 30px;
+   
+    text-align: center;
+    background-color: #f0f6ef;
+    
+    border-radius: 15px;
+}
+.testimonials{
+    
+    margin: 0px auto;
+    padding: 100px;
+}
+.testimonials p.testimonial-quote{
+    margin: 0;
+    font-size: 2.7em;
+    font-weight: 600;
+    margin-bottom: 1em;
+    color: #012b1f;
+}
+.testimonials img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+}
+.testimonials p.testimonial-author{
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #012b1f;
+    margin: 0;
+}
+.testimonials p.testimonial-role{
+    font-size: 1em;
+    color: #4a6c63;
+   margin:0;
+}
