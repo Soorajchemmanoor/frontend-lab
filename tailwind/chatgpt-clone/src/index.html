@@ -9,15 +9,86 @@
 <body>
     <div class="flex">
         <!-- sidebar -->
-        <div class="bg-neutral-100 h-screen w-[300px]">
-            
-
+        <div class="relative hidden  sm:block bg-neutral-100 h-screen w-[270px] px-4 py-3">
+            <div class="flex gap-2 items-center">
+                <img src="assets/ChatGPT-0.svg" class="h-5" alt="">
+                <p class="font-semibold tracking-tight">ChatGPT 4.0.4 </p>
+            </div>
+            <div>
+                <p class="text-xs text-neutral-500 font-semibold my-4" >Today</p>
+            </div>
+            <div class="text-neutral-800 p-2 mb-1 hover:bg-neutral-200 hover:cursor-pointer px-3 text-base rounded-lg">
+                How to use tailwind
+            </div>
+            <div class="text-neutral-800 p-2 mb-1 hover:bg-neutral-200 hover:cursor-pointer px-3 text-base rounded-lg">
+                Write article on React JS
+            </div>
+            <div class="text-neutral-800 p-2 mb-1 hover:bg-neutral-200 hover:cursor-pointer px-3 text-base rounded-lg">
+                Give examples of Truthy and Falsy
+            </div>
+            <div class="text-neutral-800 p-2 mb-1 hover:bg-neutral-200 hover:cursor-pointer px-3 text-base rounded-lg">
+                Fis the error in JS
+            </div>
+            <div class="text-neutral-800 p-2 mb-1 hover:bg-neutral-200 hover:cursor-pointer px-3 text-base rounded-lg">
+                What is share trading
+            </div>
+            <div class="text-neutral-800 p-2 mb-1 hover:bg-neutral-200 hover:cursor-pointer px-3 text-base rounded-lg">
+                How to handle Toast notificatin in React
+            </div>
+            <!-- sidebar bottom -->
+             <div class="absolute bottom-3 w-[calc(100%-32px)]">
+                <div class="text-neutral-800 w-full p-2 flex gap-2 items-center hover:bg-neutral-200 hover:cursor-pointer px-3 text-base rounded-lg">
+                    <div class="border-2 border-neutral-400 h-9 w-9 p-2 rounded-full">
+                        <img class="" src="assets/ChatGPT-5.svg" alt="">
+                    </div>
+                    <div>
+                        <p>Add Team Workspace</p>
+                        <p class="text-xs text-neutral-400">Collaborate on a team plan</p>
+                    </div>
+                </div>
+                <div class="text-neutral-800 w-full p-2  flex gap-2 items-center hover:bg-neutral-200 hover:cursor-pointer px-3 text-base rounded-lg">
+                    <img class="rounded-full h-8" src="https://images.unsplash.com/photo-1618077360395-f3068be8e001?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    <p>Sooraj P</p>
+                </div>
+             </div>
         </div>
 
         <!-- main content -->
-        <div class="h-screen w-[calc(100%-300px)]">
-            
+        <div class="h-screen w-[90%] mx-auto sm:mx-0 sm:w-[calc(100%-270px)] relative">
+            <div class="sm:w-[90%] w-full mx-auto absolute bottom-5 left-1/2 -translate-x-1/2">
+                <div class="text-center">
+                    <img src="assets/ChatGPT-0.svg" class="border inline h-16 p-3 rounded-full  " alt="">
+                    <h1 class="text-2xl font-semibold mt-3">How can i help you today?</h1>
+                </div>
+                <div class="flex flex-col sm:flex-row md:flex-row sm:block md:flex gap-3 mt-8">
+                    <div class="border rounded-xl px-5  sm:w-full md:w-1/2 mb-0 sm:mb-2 md:mb-0 py-3  hover:bg-neutral-50 hover:cursor-pointer">
+                        <h2 class="text-sm font-semibold">Create a morning routine</h2>
+                        <p class="text-sm text-neutral-500">to boost your productivity</p>
+                    </div>
 
+                    <div class="border rounded-xl px-5  sm:w-full md:w-1/2 mb-0 sm:mb-2 md:mb-0 py-3  hover:bg-neutral-50 hover:cursor-pointer">
+                        <h2 class="text-sm font-semibold">Make up a story</h2>
+                        <p class="text-sm text-neutral-500">about tooth brushing shark super hero</p>
+                    </div>   
+                </div>
+                <div class="hidden flex sm:block md:flex gap-3 mt-3 ">
+                    <div class="border rounded-xl px-5 w-1/2 sm:w-full md:w-1/2 mb-0 sm:mb-2 md:mb-0  py-3  hover:bg-neutral-50 hover:cursor-pointer">
+                        <h2 class="text-sm font-semibold">Create a morning routine</h2>
+                        <p class="text-sm text-neutral-500">to boost your productivity</p>
+                    </div>
+
+                    <div class="border rounded-xl px-5 w-1/2 sm:w-full md:w-1/2 mb-0 sm:mb-2 md:mb-0 py-3  hover:bg-neutral-50 hover:cursor-pointer">
+                        <h2 class="text-sm font-semibold">Make up a story</h2>
+                        <p class="text-sm text-neutral-500">about tooth brushing shark super hero</p>
+                    </div> 
+                    
+                </div>
+                <div>
+                    <input type="text" placeholder="Message ChatGPT" class="w-full py-3 px-5 border rounded-xl mt-3 focus:outline-none focus:shadow-sm">
+                    <p class="text-xs text-neutral-400 mt-2 text-center">ChatGPT can make mistakes. Check important info</p>
+                </div>  
+
+            </div>
         </div>
 
     </div>
