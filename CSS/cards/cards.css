@@ -23,8 +23,7 @@ body
 .card-one,.card-two,.card-three{
     width: 260px;
     margin: 100px auto 60px auto;
-    background-color: white;
-    //border: 1px solid rgb(213, 212, 212);   
+    background-color: white;  
     border-radius: 15px;
     padding: 20px;
     text-align: center;
