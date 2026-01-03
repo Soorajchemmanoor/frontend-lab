@@ -56,6 +56,46 @@ student.age = 21;
 console.log("After modifying age:", student);
 
 
+// Conditionals statements 
 
+// Task 1
+function checkNumber(num) {
+    if (num > 0) {
+        return "Positive";
+    } else if (num < 0) {
+        return "Negative";
+    } else {
+        return "Zero";
+    }
+}
 
+console.log(checkNumber(5));
 
+// Task 2
+function calculateGrade(score) {
+    if (score >= 90 && score <= 100) {
+        return "A";
+    } else if (score >= 80 && score <= 89) {
+        return "B";
+    } else if (score >= 70 && score <= 79) {
+        return "C";
+    } else if (score >= 60 && score <= 69) {
+        return "D";
+    } else {
+        return "F";
+    }
+}
+
+console.log(calculateGrade(88));
+
+// Task 3
+function checkTruthy(str) {
+    if (str) {
+        return "Truthy";
+    } else {
+        return "Falsy";
+    }
+}
+
+console.log(checkTruthy("JavaScript"));
+console.log(checkTruthy(""));
