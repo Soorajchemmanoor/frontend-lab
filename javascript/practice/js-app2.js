@@ -49,3 +49,8 @@ console.log(leoActionMovies);
 
 const dramaWithChristianBale = movies.filter(movie => movie.genre === "Drama").filter(movie => movie.actors.includes("Christian Bale"));
 console.log(dramaWithChristianBale);
+
+//Drama movies featuring Tim Robbins
+
+const dramaWithTimRobbins = movies.filter(movie => movie.genre === "Drama").filter(movie => movie.actors.includes("Tim Robbins"));
+console.log(dramaWithTimRobbins);
