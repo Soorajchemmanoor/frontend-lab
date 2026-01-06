@@ -30,7 +30,7 @@ function doesUserExist(email)
 function hideAlert(){
     setTimeout(()=>{
         alert.classList.remove('success','danger');
-    },2000)
+    },3000)
 }
 function addUser(){
     let name=document.getElementById('name');
