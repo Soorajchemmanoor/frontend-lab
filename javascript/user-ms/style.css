@@ -87,3 +87,44 @@ body{
     background-color: rgb(255, 212, 212);
     transform: scale(1);
 }
+
+.loader {
+    border: 2px solid rgba(0, 0, 0, 0.067); /* Light grey */
+    border-top: 2px solid #000000; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .page-loader{
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1000;
+  }
+  .help{
+    transition: .3s;
+    background-color: black;
+    color: white;
+    padding: 16px 30px;
+    border-radius: 50px;
+    border: none;
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    transform: scale(0);
+  }
+  .show{
+    transform: scale(1);
+
+  }

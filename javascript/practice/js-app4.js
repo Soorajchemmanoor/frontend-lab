@@ -22,3 +22,12 @@ demo.addEventListener('mouseover', ()=>{
 demo.addEventListener('mouseout', ()=>{
     alert.innerText = 'cursor is outside demo box';
 })
+
+
+let loader = document.querySelector('#loader');
+loader.classList.remove('hidden')
+loader.classList.add('page-loader')
+window.addEventListener('load', ()=>{
+    loader.classList.remove('page-loader')
+    loader.classList.add('hidden')
+})
