@@ -24,10 +24,29 @@ demo.addEventListener('mouseout', ()=>{
 })
 
 
-let loader = document.querySelector('#loader');
-loader.classList.remove('hidden')
-loader.classList.add('page-loader')
-window.addEventListener('load', ()=>{
-    loader.classList.remove('page-loader')
-    loader.classList.add('hidden')
+// let loader = document.querySelector('#loader');
+// loader.classList.remove('hidden')
+// loader.classList.add('page-loader')
+// window.addEventListener('load', ()=>{
+//     loader.classList.remove('page-loader')
+//     loader.classList.add('hidden')
+// })
+
+
+// scroll
+let btn = document.querySelector('.help')
+window.addEventListener('scroll', ()=>{
+    if(window.scrollY > 100){
+        btn.classList.add('show')
+        console.log('dsmkdmks')
+    }
+    else{
+        btn.classList.remove('show')
+    }
 })
+
+
+// let btn = document.querySelector('.help')
+// window.addEventListener('scroll', ()=>{
+//     console.log(window.scrollY)
+// })

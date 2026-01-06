@@ -42,10 +42,6 @@ body{
     }
 }
 
-
-
-
-
 .demo{
     height:160px;
     width: 160px;
@@ -60,7 +56,4 @@ body{
     border-radius: 10px;
     border: 1px solid lightgray;
     padding: 8px 15px;
-}
-.hidden{
-    display: none;
 }
