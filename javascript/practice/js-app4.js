@@ -12,3 +12,13 @@ let input = document.querySelector('input');
 input.addEventListener('keyup', ()=>{
      document.getElementById('words').innerText = input.value;
 })
+
+
+ let alert = document.querySelector('.alert')
+let demo = document.querySelector('.demo');
+demo.addEventListener('mouseover', ()=>{
+    alert.innerText = 'cursor is inside demo box';
+})
+demo.addEventListener('mouseout', ()=>{
+    alert.innerText = 'cursor is outside demo box';
+})
