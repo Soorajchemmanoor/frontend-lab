@@ -5,6 +5,7 @@ let alert = document.getElementById('alert');
 
 function renderUsers(){
     usersContainer.innerText = "";
+    i=0;
     users.forEach(user => {
 
         let div = document.createElement('div');
@@ -18,15 +19,48 @@ function renderUsers(){
         divUserDetails.classList.add('userDetails');
         spanRemoveBtn.classList.add('removeBtn');
         spanRemoveBtn.innerText='x';
+        spanRemoveBtn.setAttribute('reder-val',i);
+        i++;
         div.appendChild(divUserDetails);
         div.appendChild(spanRemoveBtn);
         usersContainer.appendChild(div);
         divUserDetails.appendChild(name);
         divUserDetails.appendChild(email);
+
+
         
+        
+    });
+
+    let removeBtn = document.querySelectorAll('.removeBtn');
+    
+    removeBtn.forEach((rBtn)=>{
+        rBtn.addEventListener('click', (e)=>{
+            removeUser(rBtn.getAttribute('reder-val'));
+        })
     });
         
 }
+
+function removeUser(renderVal){
+    let rEl = users.splice(renderVal, 1);
+    if(rEl[0]){
+    
+        alert.classList.add('success');
+        alert.innerText="User Removed Successfully";
+        hideAlert();
+    }
+    else{
+        alert.classList.add('danger');
+        alert.innerText="User is not Exist";
+        hideAlert();
+    }
+    renderUsers();
+}
+
+
+
+
 
 function doesUserExist(email)
 {
