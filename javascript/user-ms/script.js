@@ -8,14 +8,21 @@ function renderUsers(){
     users.forEach(user => {
 
         let div = document.createElement('div');
+        let divUserDetails = document.createElement('div');
+        let spanRemoveBtn = document.createElement('span');
         let name = document.createElement('p');
         let email = document.createElement('p');
         div.classList.add('user');
         name.innerText = user.name;
         email.innerText = user.email;
+        divUserDetails.classList.add('userDetails');
+        spanRemoveBtn.classList.add('removeBtn');
+        spanRemoveBtn.innerText='x';
+        div.appendChild(divUserDetails);
+        div.appendChild(spanRemoveBtn);
         usersContainer.appendChild(div);
-        div.appendChild(name);
-        div.appendChild(email);
+        divUserDetails.appendChild(name);
+        divUserDetails.appendChild(email);
         
     });
         
