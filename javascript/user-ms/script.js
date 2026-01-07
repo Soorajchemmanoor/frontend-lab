@@ -55,6 +55,7 @@ function removeUser(renderVal){
         alert.innerText="User is not Exist";
         hideAlert();
     }
+    
     renderUsers();
 }
 
