@@ -28,6 +28,8 @@ searchBtn.addEventListener('click', (e)=>{
         if(data.Error != 'Movie not found!')
         {
             movieContainer.classList.remove('hidden')
+            movieNotFoundContainer.classList.git add add('hidden');
+
             poster.src = data.Poster;
             title.innerText = data.Title;
             description.innerText = data.Plot;
@@ -42,7 +44,12 @@ searchBtn.addEventListener('click', (e)=>{
             collection.innerText = data.BoxOffice;
 
         }
-        
+        else{
+            movieContainer.classList.add('hidden')
+            movieNotFoundContainer.classList.remove('hidden');
+
+            movieSearch.innerText = movieName;
+        }
 
     } );
     
