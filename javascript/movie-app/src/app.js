@@ -28,7 +28,7 @@ searchBtn.addEventListener('click', (e)=>{
         if(data.Error != 'Movie not found!')
         {
             movieContainer.classList.remove('hidden')
-            movieNotFoundContainer.classList.git add add('hidden');
+            movieNotFoundContainer.classList.add('hidden');
 
             poster.src = data.Poster;
             title.innerText = data.Title;
