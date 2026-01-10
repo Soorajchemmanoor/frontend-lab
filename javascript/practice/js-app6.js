@@ -48,3 +48,11 @@ a = {name: 'yash', age: 24}
 b = {email: 'yash@gmail.com', gender: 'Male', age: 30}
 user = {...a, ...b}
 console.log(user)
+
+
+// reference data types => [] {} ()
+let a = [1,2,3,4,5];
+let b = [...a];
+b.shift();
+
+console.log(a,b);
