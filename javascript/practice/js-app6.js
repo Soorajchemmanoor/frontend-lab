@@ -75,3 +75,14 @@ console.log(newUser);
 newUser = {...user};
 newUser.address.city = 'delhi';
 console.log(user.address.city, newUser.address.city);
+
+
+arr = [1,2,3,4,5];
+let sqrs = arr.map(a=>a*a);
+console.log(sqrs);
+arr.splice(2,1, 11);
+console.log(arr);
+
+
+newArr = arr.toSpliced(1,1, 50);
+console.log(newArr);
