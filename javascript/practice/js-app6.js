@@ -24,3 +24,27 @@ console.log(a,b, d)
 let obj = {name: 'yash', email: 'yash@gmail.com', age: 24}
 let {age, email} = obj;
 console.log(age, email)
+
+
+
+// spread operators
+
+ arr = [1,2,3,4,5,6,7,8];
+ [a,b,c, ...d] = arr;
+console.log(a,b,c, d)
+
+
+
+
+a = [1,2,3,4,5,6];
+b = [7,8,9]
+c = [...a, ...b]
+
+console.log(c);
+
+
+
+a = {name: 'yash', age: 24}
+b = {email: 'yash@gmail.com', gender: 'Male', age: 30}
+user = {...a, ...b}
+console.log(user)
