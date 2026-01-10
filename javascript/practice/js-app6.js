@@ -86,3 +86,13 @@ console.log(arr);
 
 newArr = arr.toSpliced(1,1, 50);
 console.log(newArr);
+
+
+
+arr = [1,2,3,4,6,7,9,1,5,6];
+
+let one = arr.find(n=>n==1);
+console.log(one);
+
+// includes
+console.log(arr.includes(12));
