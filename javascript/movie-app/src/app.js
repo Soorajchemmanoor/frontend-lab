@@ -18,6 +18,7 @@ let awards = document.querySelector('#awards');
 let lang = document.querySelector('#lang');
 let released = document.querySelector('#released');
 let collection = document.querySelector('#collection');
+let tier = document.querySelector('#tier');
 
 searchBtn.addEventListener('click', (e)=>{
 
@@ -43,9 +44,40 @@ searchBtn.addEventListener('click', (e)=>{
             released.innerText = data.Released;
             collection.innerText = data.BoxOffice;
 
+            if(data.imdbRating >= 8.1)
+            {
+                tier.innerText = "Must Watch";
+                tier.classList.add("bg-green-600");
+                tier.classList.remove("bg-yellow-600","bg-orange-600", "bg-red-600");
+
+            }
+            else if(data.imdbRating >= 7.1 && data.imdbRating <= 8.0 )
+            {
+                tier.innerText = "Good & Reliable";
+                tier.classList.add("bg-yellow-600");
+                tier.classList.remove("bg-green-600", "bg-orange-600", "bg-red-600");
+
+            }
+            else if(data.imdbRating >= 6.1 && data.imdbRating <= 7.0 )
+            {
+                tier.innerText = "Decent/Average";
+                tier.classList.add("bg-orange-600");
+                tier.classList.remove("bg-green-600", "bg-yellow-600", "bg-red-600");
+            }
+            else if(data.imdbRating >= 1.0 && data.imdbRating <= 6.0 )
+            {
+                tier.innerText = "Not Recommended";
+                tier.classList.add("bg-red-600");
+                tier.classList.remove("bg-green-600", "bg-yellow-600","bg-orange-600");
+            }
+            else{
+                tier.innerText = " ";
+                tier.classList.remove("bg-green-600", "bg-yellow-600","bg-orange-600",  "bg-red-600");
+            }
+
         }
         else{
-            movieContainer.classList.add('hidden')
+            movieContainer.classList.add('hidden');
             movieNotFoundContainer.classList.remove('hidden');
 
             movieSearch.innerText = movieName;
