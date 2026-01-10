@@ -51,8 +51,27 @@ console.log(user)
 
 
 // reference data types => [] {} ()
-let a = [1,2,3,4,5];
-let b = [...a];
+a = [1,2,3,4,5];
+b = [...a];
 b.shift();
 
 console.log(a,b);
+
+
+// shallow copy => it looks like the value is copied but actually its not
+
+user = {
+    name: 'yash',
+    email: 'yash@gmail.com',
+    address: {
+        city: 'allahabad',
+        pin: 211001
+    }
+};
+
+let newUser = JSON.parse(JSON.stringify(user));
+console.log(newUser);
+
+newUser = {...user};
+newUser.address.city = 'delhi';
+console.log(user.address.city, newUser.address.city);
