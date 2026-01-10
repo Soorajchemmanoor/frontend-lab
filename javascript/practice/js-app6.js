@@ -96,3 +96,24 @@ console.log(one);
 
 // includes
 console.log(arr.includes(12));
+
+
+
+const users2 = [
+    { name: 'Yash', age: 24, gender: 'Male', hobbies: ['cooking', 'teaching', 'reading books'] },
+    { name: 'Ananya', age: 22, gender: 'Female', hobbies: ['dancing', 'singing', 'painting'] },
+    { name: 'Rohan', age: 27, gender: 'Male', hobbies: ['gaming', 'traveling', 'photography'] },
+    { name: 'Priya', age: 25, gender: 'Female', hobbies: ['writing', 'yoga', 'gardening'] },
+    { name: 'Karan', age: 23, gender: 'Male', hobbies: ['coding', 'music', 'sports'] }
+  ];
+
+  let usersHobby = users2.map(user=>{
+    let [hobby, ...sideHobbies]=  user.hobbies;
+    return {name: user.name, hobby}
+  })
+
+  console.log(usersHobby)
+
+
+let karan = users2.find(user=>user.name == 'Karan')
+console.log(karan)
