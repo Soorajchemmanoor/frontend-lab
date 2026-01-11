@@ -4,25 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="output.css">
-    <script src="https://unpkg.com/alpinejs" defer></script>
+    
     <title>To Do App</title>
 </head>
 <body>
 
-    <div class="bg-blue-600 text-white text-center py-3 font-light">If you've got tasks, start managing today!</div>
+    <div class="bg-orange-600 text-white text-center py-3 font-medium">If you've got tasks, start managing today!</div>
 
-    <div class="mt-16 w-[360px] mx-auto">
-        <h1 class="text-xl text-black font-bold">Manage your task <span class="text-neutral-500 " >@Sooraj</span></h1>
-        <p class="text-neutral-600">Add your tasks and start organizing them quickly.</p>
+    <div class="mt-10 w-[360px] mx-auto text-center">
+        <h1 class="text-xl text-orange-700 font-bold">Manage your task <span class="text-orange-600 " >@Sooraj</span></h1>
+        <p class="text-orange-400 font-semibold">Add your tasks and start organizing them quickly.</p>
     </div>
 
-    <div class="w-[360px] mx-auto mt-5 hidden">
-        
-    </div>
     
-    <div class="w-[360px] mx-auto mt-4">
-        <div class="border border-blue-400 p-3 mb-2 rounded-xl hover:shadow-md hover:cursor-pointer">
-            <p class="text-blue-700 font-semibold">Learn tailwind media queries</p>
+    
+    <div class="w-11/12 my-4 mx-auto mt-8   p-4  flex flex-wrap justify-left gap-2">
+
+        <div class="w-[340px] border border-orange-400 p-3 bg-yellow-50  rounded-xl hover:shadow-md hover:cursor-pointer ">
+            <p class="text-orange-700 font-semibold">Learn tailwind media queries</p>
             <p class="text-[14px]  text-neutral-900 mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <p class="text-[14px]  text-neutral-900 mt-1">12-01-2025 09:30</p>
             <div class="flex gap-3">
@@ -41,61 +40,40 @@
                 </button>
             </div>
 
-        </div>    
+        </div>
+
+        
+        
+            
     </div>
 
 
 
-    
 
-    <div x-data="{ modalOpen: false }"
-    @keydown.escape.window="modalOpen = false"
-    class="relative z-50 w-auto h-auto">
-        <button @click="modalOpen=true" class="fixed bottom-10 right-10 bg-black text-white rounded-full w-14 h-14 flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-            </svg>
-        </button>
-        <!-- <button  class="inline-flex justify-center items-center px-4 py-2 h-10 text-sm font-medium bg-white rounded-md border transition-colors hover:bg-neutral-100 active:bg-white focus:bg-white focus:outline-none focus:ring-2 focus:ring-neutral-200/60 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none">Open</button> -->
-        <template x-teleport="body">
-            <div x-show="modalOpen" class="fixed top-0 left-0 z-[99] flex items-center justify-center w-screen h-screen" x-cloak>
-                <div x-show="modalOpen" 
-                    x-transition:enter="ease-out duration-300"
-                    x-transition:enter-start="opacity-0"
-                    x-transition:enter-end="opacity-100"
-                    x-transition:leave="ease-in duration-300"
-                    x-transition:leave-start="opacity-100"
-                    x-transition:leave-end="opacity-0"
-                    @click="modalOpen=false" class="absolute inset-0 w-full h-full bg-black/40"></div>
-                <div x-show="modalOpen"
-                    x-trap.inert.noscroll="modalOpen"
-                    x-transition:enter="ease-out duration-300"
-                    x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                    x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
-                    x-transition:leave="ease-in duration-200"
-                    x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
-                    x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                    class="relative px-3 py-3 w-full bg-white sm:w-[460px] sm:rounded-lg">
-                    <div class="flex justify-between items-center pb-0">
-                        
-                    </div>
-                    <div class="relative w-auto p-0 m-0">
-                        <div class="">
-                            <input class="w-full p-1 text-base text-neutral-800  mb-1 focus:outline-none " type="text" placeholder="Task Name">
-                            <input class="w-full p-1 text-sm mb-0 text-neutral-700 focus:outline-none" type="datetime-local">
-                        </div>        
-                        <div class="flex justify-end gap-2 items-center">
-                            <button @click="modalOpen=false"  class="text-black border border-neutral-600 hover:text-white hover:bg-neutral-600 px-4 py-2 text-sm rounded-lg">Cancel</button>
-                            <button class="text-white bg-black hover:bg-neutral-600 px-4 py-2 text-sm rounded-lg">Add Task</button>
-                    
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </template>
+    <div id="addTaskContainer" class="shadow bg-orange-100 w-[400px] mx-auto mt-5 absolute bottom-28 right-10 p-4 rounded-xl opacity-0 scale-0 pointer-events-none transition-all duration-500 ease-out origin-bottom-right">
+        <div class="flex flex-wrap">
+            <input class="w-[91%] p-1 text-base placeholder-orange-400 text-orange-600 bg-orange-100  border-orange-400 mb-1 focus:outline-none " type="text" placeholder="Task Name ">
+            <input class="w-[9%] p-1 text-2xl mb-0 text-orange-600 bg-orange-100 focus:outline-none" type="datetime-local">
+            
+        </div>        
+        <div class="flex justify-end mt-3 gap-2 items-center">
+            <button id="addTask" class=" w-full text-white bg-black hover:bg-neutral-600 px-4 py-2 text-sm rounded-lg">Add Task</button>
+    
+        </div>
+        
     </div>
+
+
+
+    <button id="showAddTask" class="fixed bottom-10 right-10 bg-black text-white rounded-full w-14 h-14 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+        </svg>
+    </button>
+
+    
     
 
-
+    <script src="app.js"></script>
 </body>
 </html>
