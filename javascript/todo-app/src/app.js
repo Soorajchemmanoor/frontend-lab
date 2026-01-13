@@ -237,7 +237,9 @@ function dangerToast(message,icon){
 
 }
 
-document.querySelector('#showAddTask').addEventListener('click',()=>{
+let addTaskBtn = document.querySelector('#showAddTask');
+addTaskBtn.addEventListener('click',()=>{
+   
     let addTaskContainer = document.getElementById('addTaskContainer');
     addTaskContainer.classList.toggle('opacity-0'); 
     addTaskContainer.classList.toggle('scale-0');
@@ -288,3 +290,7 @@ document.querySelector('#addTask').addEventListener('click',()=>{
 
     
 });
+
+
+var el = document.getElementById('toDoList');
+var sortable = Sortable.create(el);
