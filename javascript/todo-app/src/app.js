@@ -33,11 +33,14 @@ function rederToDos(){
             todoNameClass = "text-orange-700";
         }
 
+        let dateObj = new Date(todo.date);
+        let readableDate = dateObj.toLocaleString();
+
         let todoStruct = `<div class="w-[335px] border  p-3  rounded-xl  hover:cursor-pointer ${todoBgClass}">
             <p class=" font-semibold ${todoNameClass}" >${todo.name}</p>
-            <p class="text-[14px]  text-neutral-900 mt-1">${todo.date}</p>
+            <p class="text-[14px]  text-neutral-900 mt-1">${readableDate}</p>
             <div class="flex gap-3">
-                <button todo-id="${index}" class="text-neutral-700 text-sm  hover:text-green-700 flex gap-2 mt-3 items-center" >
+                <button todo-id="${index}" class="changeStatus text-neutral-700 text-sm  hover:text-green-700 flex gap-2 mt-3 items-center" >
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
                         <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
                         <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
@@ -67,6 +70,15 @@ function rederToDos(){
             })
         }
     );
+    const changeStatus = document.querySelectorAll('.changeStatus');
+    changeStatus.forEach(
+        (tstat)=>{
+            tstat.addEventListener('click',()=>{
+                id = tstat.getAttribute('todo-id')
+                changeTaskStatus(id);
+            })
+        }
+    );
 }
 
 function deleteTask(id){
@@ -79,6 +91,39 @@ function deleteTask(id){
         rederToDos();
     }
 
+}
+
+function changeTaskStatus(id){
+    
+    if(ToDos.length > 0){
+        
+
+
+        if(ToDos[id].status=='pending')
+        {
+         
+            ToDos[id].status='done';
+            localStorage.setItem("ToDos", JSON.stringify(ToDos));
+            icon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-all text-green-500" viewBox="0 0 16 16"><path d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0"/><path d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708"/></svg>'
+            successToast('To Do Marked as Completed',icon);
+            
+        }
+        else if(ToDos[id].status=='done')
+        {
+            ToDos[id].status='pending';
+            localStorage.setItem("ToDos", JSON.stringify(ToDos));
+            icon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-all text-orange-500" viewBox="0 0 16 16"><path d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0"/><path d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708"/></svg>'
+            warningToast('To Do Marked as Pending!',icon);
+        }
+            
+
+        
+        console.log(ToDos);
+        
+        
+        rederToDos();
+
+    }
 }
 
 function successToast(message,icon){
@@ -107,6 +152,43 @@ function successToast(message,icon){
                 "scale-95",
                 "pointer-events-none",
                 "bg-green-200"
+            );
+            toast.classList.remove(
+                "opacity-100",
+                "translate-x-0",
+                "scale-100",
+                "bg-red-200"
+            );
+        }, 3000);
+
+}
+
+function warningToast(message,icon){
+
+        toastMsg = message;
+        toast.innerHTML = `${icon} <p class="text-orange-600">${toastMsg}</p>`;
+
+        toast.classList.remove(
+            "opacity-0",
+            "translate-x-6",
+            "scale-95",
+            "pointer-events-none",
+            "bg-red-200"
+        );
+        toast.classList.add(
+            "opacity-100",
+            "translate-x-0",
+            "scale-100",
+            "bg-orange-200"
+        );
+
+        setTimeout(() => {
+            toast.classList.add(
+                "opacity-0",
+                "translate-x-6",
+                "scale-95",
+                "pointer-events-none",
+                "bg-orange-200"
             );
             toast.classList.remove(
                 "opacity-100",
