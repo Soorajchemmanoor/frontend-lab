@@ -5,6 +5,15 @@ const toast = document.getElementById("todo-alert");
 
 let toastMsg = "";
 
+if(!localStorage.getItem("userName")){
+    let userName = "@"+prompt('Enter Your Name');
+    localStorage.setItem("userName", userName);
+    document.querySelector('#user-name').innerText = localStorage.getItem("userName");
+}
+else{
+    document.querySelector('#user-name').innerText = localStorage.getItem("userName");
+}
+
 
 if(!localStorage.getItem("ToDos"))
 {
@@ -160,9 +169,9 @@ function successToast(message,icon){
                 "translate-x-0",
                 "scale-100",
                 "bg-red-200",
-                "bg-orange-200 "
+                "bg-orange-200"
             );
-        }, 3000);
+        },3000);
 
 }
 
