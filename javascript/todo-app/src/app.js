@@ -270,12 +270,13 @@ document.querySelector('#addTask').addEventListener('click',()=>{
         'status':'pending'
     };
 
-    
+    if(date!="")
+    {
         ToDos.push(taskDetails);
         localStorage.setItem("ToDos", JSON.stringify(ToDos));
-   
+    }
 
-    if (ToDos.length > 0 ) 
+    if (ToDos.length > 0 && date!="") 
     {
         
 
