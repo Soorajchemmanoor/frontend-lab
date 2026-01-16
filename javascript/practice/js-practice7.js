@@ -25,3 +25,30 @@ console.log(typeof ob);
 console.log(typeof undefined);
 console.log(typeof true);
 console.log(typeof "undefined");
+
+
+let a = 5
+let b = "5"
+
+console.log(a == b)
+
+a = 5
+b = ["5"]
+
+console.log(a == b)
+
+a = "a"
+b = ["a"]
+
+console.log(a == b)
+
+a = "v"
+b = ["a","dc"]
+
+console.log(a+b)
+
+
+a = ["v"]
+b = ["a","dc"]
+
+console.log(a+b)
