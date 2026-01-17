@@ -52,3 +52,45 @@ a = ["v"]
 b = ["a","dc"]
 
 console.log(a+b)
+
+
+console.log([1,2] + 3);
+
+console.log("10" - [2]);
+
+
+console.log([1] + {});
+
+
+console.log(true + [1,2]);
+
+
+console.log(null + [5]);
+
+console.log(10 + true);
+
+console.log([] + []);
+
+
+console.log([] + {});
+
+
+console.log({} + []);
+
+
+
+console.log(0 == []);
+
+console.log("0" == []);
+
+console.log(false == []);
+
+
+console.log("5" * "2");
+
+console.log([5] * 2);
+
+console.log("5" - true);
+
+console.log("5" + true);
+
