@@ -94,3 +94,13 @@ console.log("5" - true);
 
 console.log("5" + true);
 
+
+
+// Remove duplicates from array
+
+const nums = [1, 2, 2, 3, 3, 3, 4];
+
+const unique = new Set(nums);
+
+console.log(unique);          // Set {1,2,3,4}
+console.log([...unique]);   // [1,2,3,4]
