@@ -120,3 +120,16 @@ console.log(set.has(20)); // true
 
 set.delete(10);
 console.log(set);        // Set {20}
+
+
+// Example 3: Find first repeating element
+function firstRepeat(arr) {
+  const seen = new Set();
+
+  for (const n of arr) {
+    if (seen.has(n)) return n;
+    seen.add(n);
+  }
+}
+
+console.log(firstRepeat([5,1,2,3,2,4])); // 2
