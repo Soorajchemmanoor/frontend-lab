@@ -141,3 +141,16 @@ const b = new Set([3,4,5]);
 
 const union = new Set([...a, ...b]);
 console.log(union); // {1,2,3,4,5}
+
+
+
+
+// 2. MAP – Key → Value (better than objects)
+// ✅ Example 1: Basic Map
+const map = new Map();
+
+map.set("name", "Sooraj");
+map.set("age", 25);
+
+console.log(map.get("name")); // Sooraj
+console.log(map.has("age"));  // true
