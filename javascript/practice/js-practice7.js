@@ -104,3 +104,19 @@ const unique = new Set(nums);
 
 console.log(unique);          // Set {1,2,3,4}
 console.log([...unique]);   // [1,2,3,4]
+
+
+// Example 2: Add / Delete / Check
+
+const set = new Set();
+
+set.add(10);
+set.add(20);
+set.add(10);   // duplicate ignored
+
+console.log(set);        // Set {10,20}
+
+console.log(set.has(20)); // true
+
+set.delete(10);
+console.log(set);        // Set {20}
