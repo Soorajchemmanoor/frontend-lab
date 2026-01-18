@@ -154,3 +154,34 @@ map.set("age", 25);
 
 console.log(map.get("name")); // Sooraj
 console.log(map.has("age"));  // true
+
+
+// Example 2: Any type as key
+const m = new Map();
+
+m.set(1, "number key");
+m.set(true, "boolean key");
+m.set({id:1}, "object key");
+
+console.log(m);
+
+
+// Example 3: Count frequency (BEST USE)
+function countFreq(arr) {
+  const freq = new Map();
+
+  for (const n of arr) {
+    freq.set(n, (freq.get(n) || 0) + 1);
+  }
+
+  return freq;
+}
+
+console.log(countFreq([1,2,2,3,1]));
+// Map {1 => 2, 2 => 2, 3 => 1}
+
+
+// Example 4: Loop Map
+for (const [key, value] of map) {
+  console.log(key, value);
+}
