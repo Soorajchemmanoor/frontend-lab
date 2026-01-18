@@ -133,3 +133,11 @@ function firstRepeat(arr) {
 }
 
 console.log(firstRepeat([5,1,2,3,2,4])); // 2
+
+
+// Example 4: Set operations (union)
+const a = new Set([1,2,3]);
+const b = new Set([3,4,5]);
+
+const union = new Set([...a, ...b]);
+console.log(union); // {1,2,3,4,5}
