@@ -185,3 +185,22 @@ console.log(countFreq([1,2,2,3,1]));
 for (const [key, value] of map) {
   console.log(key, value);
 }
+
+
+
+
+
+// Combined Example of SET And MAP
+
+const users = ["a","b","a","c","b"];
+
+const uniqueUsers = new Set(users);
+
+const freq = new Map();
+
+for (const u of users) {
+  freq.set(u, (freq.get(u) || 0) + 1);
+}
+
+console.log(uniqueUsers); // Set {a,b,c}
+console.log(freq);        // Map {a=>2, b=>2, c=>1}
