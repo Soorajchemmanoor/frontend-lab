@@ -136,8 +136,8 @@ console.log(firstRepeat([5,1,2,3,2,4])); // 2
 
 
 // Example 4: Set operations (union)
-const a = new Set([1,2,3]);
-const b = new Set([3,4,5]);
+const set1 = new Set([1,2,3]);
+const set2 = new Set([3,4,5]);
 
 const union = new Set([...a, ...b]);
 console.log(union); // {1,2,3,4,5}
@@ -204,3 +204,21 @@ for (const u of users) {
 
 console.log(uniqueUsers); // Set {a,b,c}
 console.log(freq);        // Map {a=>2, b=>2, c=>1}
+
+
+// Custom Error Handling
+
+function divide(a, b) {
+  try {
+    if (b === 0) {
+      throw new Error("Cannot divide by zero");
+    }
+
+    return a / b;
+
+  } catch (err) {
+    console.log("Error:", err.message);
+  }
+}
+
+divide(10, 0);
