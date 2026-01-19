@@ -222,3 +222,15 @@ function divide(a, b) {
 }
 
 divide(10, 0);
+
+
+// JSON Parsing 
+
+const data = '{"name":"Sooraj"}';
+
+try {
+  const user = JSON.parse(data);
+  console.log(user.name);
+} catch (e) {
+  console.log("Invalid JSON");
+}
