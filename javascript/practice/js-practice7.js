@@ -234,3 +234,16 @@ try {
 } catch (e) {
   console.log("Invalid JSON");
 }
+
+
+
+// try…catch…finally
+
+try {
+  console.log("Start");
+  throw new Error("Problem!");
+} catch (e) {
+  console.log("Caught:", e.message);
+} finally {
+  console.log("Always runs");
+}
