@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Counter from './components/Counter';
 import Alert from './components/Alert';
 import Navbar from './Navbar';
+import Loader from './components/Loader';
 
 
 function App(){
@@ -15,6 +16,7 @@ function App(){
       <p className='bg-blue-500 text-white p-4'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et debitis error enim nostrum!</p>
       <Counter />
       <Alert />
+      <Loader />
     </> 
   )
 
