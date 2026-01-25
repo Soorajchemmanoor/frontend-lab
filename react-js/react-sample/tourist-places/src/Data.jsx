@@ -30,6 +30,8 @@ const touristPlaces = [
     whenToVisit: "Winter",
     ratings: 4.6,
     price: 12000
-  }
+  },
+  
+
 ];
 export default touristPlaces;
