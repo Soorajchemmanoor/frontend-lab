@@ -1,0 +1,17 @@
+function Footer() { 
+
+    const CurrentYear = new Date().getFullYear();
+
+    return (
+        <>
+            <footer className="bg-gray-800 text-white p-4 text-center">
+                <p>&copy; {CurrentYear} My React SPA. All rights reserved.</p>           
+
+            </footer>
+        
+        </>
+
+    );
+}   
+
+export default Footer;

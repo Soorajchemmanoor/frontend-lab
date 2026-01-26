@@ -2,6 +2,10 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Footer from './components/Footer';
+
 
 function App(){
 
@@ -11,9 +15,10 @@ function App(){
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/about' element={<p className='bg-blue-500 text-white p-4'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et debitis error enim nostrum!</p>} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} /> 
       </Routes>
-     
+      <Footer />
       
      
     </> 
