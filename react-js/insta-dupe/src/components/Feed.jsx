@@ -2,7 +2,7 @@ function Feed({ key, post }){
     return(
         <>
             
-            <img src={post.image} alt={post.caption} className="w-[260px] h-64 object-cover flex-grow"  />
+            <img src={post.image} alt={post.caption} className="w-[282px] h-80 object-cover flex-grow"  />
                 
         </>
         
