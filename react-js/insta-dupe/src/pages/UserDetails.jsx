@@ -1,3 +1,4 @@
+import Feed from '../components/Feed';
 import users from '../Users';
 import { useParams } from 'react-router-dom';
 
@@ -35,6 +36,17 @@ function   UserDetails() {
                 </div>
                     
 
+            </div>
+            <div className="mx-auto max-w-4xl p-4 flex flex-wrap gap-4">
+                
+                <h2 className="text-2xl font-bold w-full mb-4">Posts by {user.name}</h2>
+                <div className="grid grid-cols-3 gap-4 w-full">
+                    {user.posts.map((post, index) => (
+                        <Feed key={index} post={post} />
+                    ))}
+                </div>
+
+            
             </div>
         </>
     )
