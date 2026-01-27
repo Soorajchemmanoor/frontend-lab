@@ -1,9 +1,12 @@
-function Feed({ key, post }){
+import { Link } from "react-router-dom";
+
+function Feed({ username, key,  post }){
     return(
         <>
-            
-            <img src={post.image} alt={post.caption} className="w-[282px] h-80 object-cover flex-grow"  />
-                
+           
+            <Link to={`/profile/${username}/post/${post.id}`}>
+            <img src={post.image} alt={post.caption} className="w-70.5 h-80 object-cover grow"  />
+            </Link>
         </>
         
     );

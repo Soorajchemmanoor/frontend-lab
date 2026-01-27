@@ -41,8 +41,8 @@ function   UserDetails() {
                 
                 <h2 className="text-2xl font-bold w-full mb-4">Posts by {user.name}</h2>
                 <div className="grid grid-cols-3 gap-2 w-full">
-                    {user.posts.map((post, index) => (
-                        <Feed key={index} post={post} />
+                    {user.posts.map((post) => (
+                        <Feed username={user.username} key={post.id}  post={post} />
                     ))}
                 </div>
 
